@@ -1,0 +1,20 @@
+{
+  "name": "winterwishes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "body-parser": "^1.14.1",
+    "mongoose": "^4.2.5",
+    "express": "^4.13.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

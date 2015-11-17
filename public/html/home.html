@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="winterApp" class="background">
+  <head>
+    <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+  <meta name="apple-mobile-web-app-capable" content="no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <script src="../javascript/snowstorm.js"></script>
+
+    <title>Winter Wishes</title>
+    
+    
+    <link rel="stylesheet" href="../style/main.css">
+   
+  </head>
+
+
+  <body ng-controller="winterController">
+<div class="grad"> </div>
+   <!--  <img class="treeimg"src="../images/winter-trees.png"> -->
+     <h1> Winter <br> &nbsp Wishes</h1>
+
+      <div>
+        <button ng-hide="!learnButton" class="beginButton"ng-hide="!sideBar" ng-click="sideBar=false; learnButton=false"   type="button">Learn More</button>
+      </div>
+    
+ 
+    
+
+      <div ng-show="!sideBar"class="sidemenu">
+         <form ng-show="!sideBar"> 
+          <button ng-click="makeWish=true; sideBar=true; learnButton=False"type="button" text="Submit a Wish!">Submit a Wish</button>
+          <button type="button" ng-click="currentWish=true; sideBar=true; learnButton=False"text="See Current Wishes">See Wishes</button>
+          <button ng-click="about=true; sideBar=true " type="button" text="About"> About</button>
+          <input type="image" src="../images/fb.png" />
+          <input type="image" src="../images/twitter.png" />
+          <input type="image" src="http://example.com/path/to/image.png" />
+          <input type="image" src="http://example.com/path/to/image.png" />
+          <input type="image" src="http://example.com/path/to/image.png" />
+        </form>
+      </div>
+
+      <!-- About page -->
+      <div class="about"ng-show="about">
+       
+          <p class="abouttext"> This page was create to give people hope. A place for everyone in the world to share their hopes, dreams, and wishes. What do you need this winter season? What does your family or friend need? What does the world need? Share your wishes and have fun. </p>
+          <button ng-click="about=false; makeWish=true; learnButton=false" class="aboutButton" type="button" text="Submit a Wish!">Submit a Wish</button>
+          <button class="aboutButton" ng-click="currentWish=true; about=false; learnButton=true" type="button" text="See Current Wishes">See Wishes</button>
+      </div>
+
+      <div  ng-show="makeWish">
+         <textarea class="wishMaker" maxlength="1000" min="25" placeholder="Enter your wish here for the world to see..." autofocus required type="text"></textarea>
+        
+        <input type="name" class="name"autocomplete="on" placeholder = "Name (optional)">
+      </div>
+      <!--  This is where Wishes are entered -->
+      <img ng-show="makeWish" class="wishBackground" src='../images/wishes.png'>
+      <div ng-show="makeWish"class="wishbox"></div>
+      <button type="submit" ng-click="currentWish=true; makeWish=false"class="submitButton" ng-show="makeWish">Submit</button>
+
+      <!-- This is where wishes can be seen  -->
+        <div ng-show="currentWish">
+        <img ng-show="currentWish" class="wishBackground currentWishes" src='../images/christmas.jpg'>
+        </div>
+         <button ng-show="currentWish" type="submit" ng-click="currentWish=false; learnButton=true"class="submitButton homeButton">Home</button>
+
+      
+  
+   <script src="../javascript/main.js"></script>
+  </body>
+
+
+</html>

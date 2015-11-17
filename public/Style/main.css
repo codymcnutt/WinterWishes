@@ -1,0 +1,178 @@
+.background{
+	background-image: url('../images/winter-trees.png');
+	height:100%;
+	width: 100%;
+}
+h1{
+	font-family: winter;
+	font-size: 80px;
+	    text-shadow: -4px 2px black;
+    color: white;
+      position: absolute;
+    left: 2%;
+    top:-2%;
+    z-index: 3;
+}
+.wishBackground{
+	position:fixed;
+    height: 105vh;
+    width: 105%;
+    left: -5%;
+    top: -5%;
+}
+.grad{
+	z-index: 1;
+  background: linear-gradient(to top, rgba(0,153,230, 1), rgba(153, 221, 255,.2 )); 
+    height: 105vh;
+    width: 105%;
+    position: absolute;
+    left: -5%;
+    top: -5%;
+}
+
+.sidemenu{ 
+    position: absolute;
+    height: 100%;
+    width: 36%;
+     top:0%;
+    left:0%;
+    background-color: darkgray;
+    z-index: 4;
+    border-radius:0px 42px 42px 0px;
+}
+button{   
+	background-color:ghostwhite;
+	border: none;
+    height: 16%;
+    position: relative;
+    display: block;
+    margin:10%;
+    padding:5%;
+    width:70%;
+    font-family: winter;
+    font-size: 20px;
+    border: red dashed 5px;
+    border-radius: 10px;
+    z-index: 2;
+    outline: none;
+    text-align: center;
+	opacity:.8;
+}
+button:hover{
+	cursor: url('../images/tree2.gif'), default;
+	border:dashed ghostwhite 5px;
+	background-color: red;
+	color: ghostwhite;
+}
+.beginButton{
+	background-color:ghostwhite;
+	width:35vh;
+	height:8vh;
+	font-size: 4vh;
+	top:45%;
+	font-size: 130%;
+    position: absolute;
+    padding: 0px;
+	border: dashed red 5px;
+    color: red;
+    box-shadow: -7px 8px 19px -2px lightblue;
+ 
+}
+.beginButton:hover{
+	border:dashed ghostwhite 5px;
+	background-color: red;
+	color: ghostwhite;
+}
+.about{
+	    position: fixed;
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    z-index: 2;
+    margin-top: 3%;
+    margin-left: 3%;
+    background-image: url('../images/about.png');
+    background-size: cover;
+    padding: 5%;
+    text-align: center;
+    border-radius: 15px;
+    height:100%;
+    overflow: auto;
+}
+.abouttext{
+	background-color:rgba(255, 255, 255,.7);
+
+}
+.aboutButton{
+	border: dashed red 5px;
+    position: relative;
+    display: inline;
+    margin: 4%;
+    padding: 2%;
+        background-color: ghostwhite;
+    color: red;
+    font-size: 4vh;
+    opacity:.8;
+        box-shadow: -7px 8px 19px -2px lightblue;
+}
+.aboutButton:hover{
+	border:dashed ghostwhite 5px;
+	background-color: red;
+	color: ghostwhite;
+}
+p{
+	font-family: fantasy;
+	font-size: 1.5em;
+	padding:5px;
+}
+.wishMaker{
+	    position: absolute;
+    height: 18%;
+    width: 44%;
+    z-index: 1;
+    background-color: inherit;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+	border-radius:10px;
+	       top: 45%;
+    left: 40%;
+    color: black;
+    border:solid black;
+    outline:none;
+}
+.name{    z-index: 1;
+    position: absolute;
+    left: 41%;
+    top: 70%;
+background-color: inherit;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1em;
+	border-radius:10px;
+	outline: none;
+	border:solid black;
+}
+.submitButton{
+	    height: 5%;
+    width: 14%;
+    position: relative;
+    padding: none;
+    padding: 6px;
+    margin: 0;
+    left: 72%;
+    top: 69vh;
+    display: -webkit-inline-box;
+}
+.currentWishes{
+	z-index:2;
+}
+.homeButton{
+	    left: 9%;
+    top: 83vh;
+
+}
+@font-face{
+	font-family: winter;
+	src: url(../fonts/winter.woff);
+}
