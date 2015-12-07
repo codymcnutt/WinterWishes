@@ -34,9 +34,9 @@
           <button ng-click="about=true; sideBar=true " type="button" text="About"> About</button>
           <input type="image" src="../images/fb.png" />
           <input type="image" src="../images/twitter.png" />
+<!--           <input type="image" src="http://example.com/path/to/image.png" />
           <input type="image" src="http://example.com/path/to/image.png" />
-          <input type="image" src="http://example.com/path/to/image.png" />
-          <input type="image" src="http://example.com/path/to/image.png" />
+          <input type="image" src="http://example.com/path/to/image.png" /> -->
         </form>
       </div>
 
@@ -62,6 +62,7 @@
         <div ng-show="currentWish">
         <img ng-show="currentWish" class="wishBackground currentWishes" src='../images/christmas.jpg'>
         </div>
+        <div ng-show="currentWish" class= "wishlist"></div>
          <button ng-show="currentWish" type="submit" ng-click="currentWish=false; learnButton=true"class="submitButton homeButton">Home</button>
 
       

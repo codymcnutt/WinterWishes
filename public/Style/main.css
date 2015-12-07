@@ -88,7 +88,7 @@ button:hover{
     height: 80%;
     width: 80%;
     text-align: center;
-    z-index: 2;
+    z-index: 5;
     margin-top: 3%;
     margin-left: 3%;
     background-image: url('../images/about.png');
@@ -170,7 +170,18 @@ background-color: inherit;
 .homeButton{
 	    left: 9%;
     top: 83vh;
+}
 
+.wishlist{
+    height: 45%;
+    width: 57%;
+    opacity: .7;
+    background-color: white;
+    z-index: 3;
+    position: fixed;
+    left: 32%;
+    top: 44%;
+    border-radius: 10px;
 }
 @font-face{
 	font-family: winter;
