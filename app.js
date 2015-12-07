@@ -2,7 +2,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var controller = require('./controllers/controller.js')
+var controller = require('./controllers/controller.js');
 mongoose.connect('mongodb://localhost/Christmas');
 
 // Auth Requires
@@ -23,14 +23,10 @@ app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res){
   res.sendFile("/html/home.html", {root : './public'})
 });
-
-app.get('/api/me', function(req, res){
-	res.send(req.user)
-});
 app.post('/api/savedWishes', controller.createWish)
-app.get('/api/me', function(req, res){
-	res.send(req.user)
-})
+
+app.get('/api/getWishes', controller.getWishes)
+ 
 
 // var authenticationController = require('./controllers/authentication');
 

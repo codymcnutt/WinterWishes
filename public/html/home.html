@@ -49,20 +49,20 @@
       </div>
 
       <div  ng-show="makeWish">
-         <textarea class="wishMaker" maxlength="1000" min="25" placeholder="Enter your wish here for the world to see..." autofocus required type="text"></textarea>
+         <textarea ng-model="newWish.wish" class="wishMaker"  placeholder="Enter your wish here for the world to see..." autofocus required type="text"></textarea>
         
-        <input type="name" class="name"autocomplete="on" placeholder = "Name (optional)">
+        <input ng-model="newWish.name" class="name"autocomplete="on" placeholder = "Name (optional)">
       </div>
       <!--  This is where Wishes are entered -->
       <img ng-show="makeWish" class="wishBackground" src='../images/wishes.png'>
       <div ng-show="makeWish"class="wishbox"></div>
-      <button type="submit" ng-click="currentWish=true; makeWish=false"class="submitButton" ng-show="makeWish">Submit</button>
+      <button type="submit" ng-click="currentWish=true; makeWish=false; createWish()"class="submitButton" ng-show="makeWish">Submit</button>
 
       <!-- This is where wishes can be seen  -->
         <div ng-show="currentWish">
         <img ng-show="currentWish" class="wishBackground currentWishes" src='../images/christmas.jpg'>
         </div>
-        <div ng-show="currentWish" class= "wishlist"></div>
+        <div ng-show="currentWish" class= "wishlist"><p>{{createWish.name}} {{createWish.wish}}</p></div>
          <button ng-show="currentWish" type="submit" ng-click="currentWish=false; learnButton=true"class="submitButton homeButton">Home</button>
 
       

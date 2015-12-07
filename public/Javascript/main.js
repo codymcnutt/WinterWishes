@@ -3,30 +3,37 @@ angular.module('winterApp', [])
 angular.module('winterApp')
 	.controller('winterController', ['$scope', '$http', function($scope, $http){
 
-    $http.get('/api/me')
-        .then(function(returnData){
-          if(!returnData.data){
+    // $http.get('/api/me')
+    //     .then(function(returnData){
+    //       if(!returnData.data){
 
-            // if not logged in, force back to home page
-            // window.location.href="/"
+    //         // if not logged in, force back to home page
+    //         // window.location.href="/"
             
+    //       }
+          var wishList =[]
+
+          var getWishes = function(){
+              $http.get('/api/getWishes')
+              .then(function(returnData){
+                console.log(returnData.data)
+                wishList.push(returnData.data)
+              })
           }
-          
-          $scope.user = returnData.data
 
-        })
+      getWishes()
 
-      $http.post('/api/savedWishes')
-        .then(function(returnData){
-          $scope.savedWishes = returnData.data 
-        })
         
         $scope.createWish = function(){
-          http.post('/api/savedWishes', $scope.newWish)
+          console.log('createWish', $scope.newWish)
+          $http.post('/api/savedWishes', $scope.newWish)
            .then(function(returnData){
+            getWishes()
             console.log('Wish sucessfully submitted to database', returnData)
+          $scope.savedWishes = returnData.data 
+          
 
-           })
+        })
         }
 
   $scope.sideBar = true;
