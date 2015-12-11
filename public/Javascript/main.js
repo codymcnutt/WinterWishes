@@ -1,7 +1,12 @@
+
+
 angular.module('winterApp', [])
 
 angular.module('winterApp')
 	.controller('winterController', ['$scope', '$http', function($scope, $http){
+
+
+
 
     // $http.get('/api/me')
     //     .then(function(returnData){
@@ -13,20 +18,19 @@ angular.module('winterApp')
     //       }
 
         // $scope.wishList =[]
-        
+           $scope.quantity = 1;
           var getWishes = function(){
               $http.get('/api/getWishes')
               .then(function(returnData){
-               
                 $scope.wishList=returnData.data
-                $scope.$apply
+                  // getWishes( 200000);
                  console.log($scope.wishList)
           
               })
           }
 
       
-
+   
       getWishes()
       // This is to add realtime feedback from the server to the client
       // target.addEventListener(string, function()[, useCapture]);

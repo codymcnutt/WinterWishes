@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var WishSchema = mongoose.Schema({
 
 	wish					      : {type : String, required: true},
-	name					      : {type : String},
+	name					      : {type : String, default:"-Anonymous"},
 	time 						  : { type : Date, default: Date.now },
 	// empty object denotes it could change - typless property
 	// empty object denotes it could change - typless property
