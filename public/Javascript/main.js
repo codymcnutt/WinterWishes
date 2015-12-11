@@ -11,19 +11,26 @@ angular.module('winterApp')
     //         // window.location.href="/"
             
     //       }
-          var wishList =[]
 
+        // $scope.wishList =[]
+        
           var getWishes = function(){
               $http.get('/api/getWishes')
               .then(function(returnData){
-                console.log(returnData.data)
-                wishList.push(returnData.data)
+               
+                $scope.wishList=returnData.data
+                $scope.$apply
+                 console.log($scope.wishList)
+          
               })
           }
 
-      getWishes()
+      
 
-        
+      getWishes()
+      // This is to add realtime feedback from the server to the client
+      // target.addEventListener(string, function()[, useCapture]);
+         
         $scope.createWish = function(){
           console.log('createWish', $scope.newWish)
           $http.post('/api/savedWishes', $scope.newWish)

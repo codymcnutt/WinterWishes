@@ -5,6 +5,8 @@ var WishSchema = mongoose.Schema({
 
 	wish					      : {type : String, required: true},
 	name					      : {type : String},
+	time 						  : { type : Date, default: Date.now },
+	// empty object denotes it could change - typless property
 	// empty object denotes it could change - typless property
 	
 
