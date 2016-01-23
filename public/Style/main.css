@@ -125,7 +125,8 @@ p{
     font-size: 1.5em;
     padding:5vh;
     overflow:scroll;
-    text-align:center;;
+    text-align:center;
+    padding-top:1vh;;
 }
 .wishMaker{
         position: absolute;
@@ -179,7 +180,7 @@ background-color: white;
 .wishlist{
     height: 45%;
     width: 57%;
-    opacity: .7;
+    opacity: .8;
     background-color: white;
     z-index: 3;
     position: fixed;
@@ -193,4 +194,24 @@ background-color: white;
 @font-face{
     font-family: winter;
     src: url(../fonts/winter.woff);
+}
+.intro{
+    position: absolute;
+    height: 105%;
+    width: 100%;
+}
+.redIntro{
+    margin-top: 2%;
+}
+header{
+    background-color: rgba(128,0,0,.5);
+    top: -1vh;
+    position: fixed;
+    padding: 0vh;
+    left: -4vh;
+        width: 104%;;
+}
+.menulogo{
+    width: 65px;
+    drop-shadow: 1px 1px 1px 1p black;
 }

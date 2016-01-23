@@ -23,7 +23,7 @@ angular.module('winterApp')
               $http.get('/api/getWishes')
               .then(function(returnData){
                 $scope.wishList=returnData.data
-                  // getWishes( 200000);
+                  // getWishes( 600000);
                  console.log($scope.wishList)
           
               })

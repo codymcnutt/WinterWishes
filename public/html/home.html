@@ -62,8 +62,8 @@
         <div ng-show="currentWish">
         <img ng-show="currentWish" class="wishBackground currentWishes" src='../images/christmas.jpg'>
         </div>
-        <div ng-show="currentWish" class= "wishlist"> <p ng-repeat="wish in wishList | orderBy:'time':true | limitTo:1"> {{wish.wish}} <BR> <BR> {{wish.name}} </p></div>
-         <button ng-show="currentWish" type="submit" ng-click="currentWish=false; learnButton=true"class="submitButton homeButton">Home</button>
+        <div ng-show="currentWish" class= "wishlist"> <p ng-repeat="wish in wishList | orderBy:'time':true | limitTo:10"> {{wish.wish}} <BR> <BR> {{wish.name}} </p></div>
+         <button ng-show="currentWish" type="submit" ng-click="getWishes(); currentWish=false; learnButton=true"class="submitButton homeButton">Home</button>
 
       
   
